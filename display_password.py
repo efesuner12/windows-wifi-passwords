@@ -1,6 +1,6 @@
 import subprocess
 
-def displayWifiPass():
+def display_wifi_pass():
     passwords = ""
 
     data = subprocess.check_output(['netsh', 'wlan', 'show', 'profiles']).decode('utf-8', errors="backslashreplace").split('\n')
@@ -21,5 +21,6 @@ def displayWifiPass():
 
     return passwords
 
+
 if __name__ == "__main__":
-    print(displayWifiPass())
+    print(display_wifi_pass())
